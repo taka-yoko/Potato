@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="162.66666666666666" y="349.79333333333335"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="fpj-ib-owN">
             <objects>
-                <viewController storyboardIdentifier="Image" id="KK3-2H-Wgx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Image" id="KK3-2H-Wgx" customClass="ImageViewController" customModule="Potato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zWn-Dw-9zY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,11 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="fbM-52-3Wg"/>
+                                    <barButtonItem systemItem="camera" id="fbM-52-3Wg">
+                                        <connections>
+                                            <action selector="cameraTapped" destination="KK3-2H-Wgx" id="ITA-2T-QMc"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fWX-il-omH"/>
                                     <barButtonItem systemItem="action" id="G1n-gy-6HH"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="L0w-ps-DKN"/>
