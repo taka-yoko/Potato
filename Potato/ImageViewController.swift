@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
+class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,12 @@ class ImageViewController: UIViewController {
     }
     
     @IBAction func cameraTapped(){
+        
+        //UIImagePickeControllerを使うための定数
+        let pickerController = UIImagePickerController()
+        //UIImagePickerControllerのデリゲートメソッドを使用する設定
+        pickerController.delegate = self
+        
         //UIActionSheetを使うための定数を作成
         let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
@@ -31,9 +37,13 @@ class ImageViewController: UIViewController {
         })
         let cameraAction = UIAlertAction(title: "Camera", style: .Default, handler: {
             (action) -> Void in
+            pickerController.sourceType = .Camera
+            self.presentViewController(pickerController, animated: true, completion: nil)
         })
         let libraryAction = UIAlertAction(title: "Library", style: .Default, handler: {
             (action) -> Void in
+            pickerController.sourceType = .PhotoLibrary
+            self.presentViewController(pickerController, animated: true, completion: nil)
         })
         
         //アクションシートにアクションボタンを追加
