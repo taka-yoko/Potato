@@ -14,6 +14,7 @@
 		2B1756BF1DA8980400DCEA39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1756BD1DA8980400DCEA39 /* LaunchScreen.storyboard */; };
 		2B1756CA1DA8980400DCEA39 /* PotatoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1756C91DA8980400DCEA39 /* PotatoTests.swift */; };
 		2B1756D51DA8980400DCEA39 /* PotatoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1756D41DA8980400DCEA39 /* PotatoUITests.swift */; };
+		2B7945541DA8B54000C55A06 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 2B7945531DA8B54000C55A06 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2B1756D01DA8980400DCEA39 /* PotatoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PotatoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1756D41DA8980400DCEA39 /* PotatoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotatoUITests.swift; sourceTree = "<group>"; };
 		2B1756D61DA8980400DCEA39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B7945531DA8B54000C55A06 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				2B1756B41DA8980400DCEA39 /* AppDelegate.swift */,
 				2B1756B61DA8980400DCEA39 /* ViewController.swift */,
+				2B7945531DA8B54000C55A06 /* images */,
 				2B1756B81DA8980400DCEA39 /* Main.storyboard */,
 				2B1756BB1DA8980400DCEA39 /* Assets.xcassets */,
 				2B1756BD1DA8980400DCEA39 /* LaunchScreen.storyboard */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					2B1756B01DA8980400DCEA39 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FCHLM2BSCE;
 					};
 					2B1756C41DA8980400DCEA39 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -229,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B7945541DA8B54000C55A06 /* images in Resources */,
 				2B1756BF1DA8980400DCEA39 /* LaunchScreen.storyboard in Resources */,
 				2B1756BC1DA8980400DCEA39 /* Assets.xcassets in Resources */,
 				2B1756BA1DA8980400DCEA39 /* Main.storyboard in Resources */,
@@ -399,10 +404,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Potato/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.takayoshi.yokoyama.Potato;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +418,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Potato/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.takayoshi.yokoyama.Potato;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -482,6 +493,7 @@
 				2B1756DB1DA8980400DCEA39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B1756DC1DA8980400DCEA39 /* Build configuration list for PBXNativeTarget "PotatoTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +502,7 @@
 				2B1756DE1DA8980400DCEA39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B1756DF1DA8980400DCEA39 /* Build configuration list for PBXNativeTarget "PotatoUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +511,7 @@
 				2B1756E11DA8980400DCEA39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
