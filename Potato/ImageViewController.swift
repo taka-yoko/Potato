@@ -10,6 +10,10 @@ import UIKit
 
 class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    
+    //UIImagePickerControllerで取得した画像を表示
+    @IBOutlet var mainImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,5 +58,14 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         //アクションシートを表示
         self.presentViewController(sheet, animated: true, completion: nil)
     }
+    
+    //UIImagePickerController画像取得メソッド
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String: AnyObject]?) {
+        //引数 imageに格納された画像をmainImageViewにセット
+        mainImageView.image = image
+        //カメラ画面もしくはフォトライブラリ画面を閉じる
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 
 }
